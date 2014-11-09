@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <CIS>CS</CIS>
+    <CLASSNAME>B超,彩B,脑彩超,照片</CLASSNAME>
+    <SERVER>1.1.120.54</SERVER>
+    <SERVERPATH>data</SERVERPATH>
+    <DATABASE>6569</DATABASE>
+    <EXEFILE>DrStudioViewer\DrStudio.exe</EXEFILE>
+    <FIELDNAME>超声所见</FIELDNAME>
+  </Table>
+</NewDataSet>

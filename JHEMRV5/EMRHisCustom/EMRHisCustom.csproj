@@ -1,0 +1,415 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6ECDD615-86A5-4DE9-AA2C-04B8EDB3A62C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHEMR.EMRHisCustom</RootNamespace>
+    <AssemblyName>EMRHisCustom</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL" />
+    <Reference Include="EMREdit, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\EMREdit.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysAdaper, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents and Settings\PeterV5\桌面\本机嘉和电子病历平台软件\本机嘉和电子病历平台软件\EmrSysAdaper.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysCom, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents and Settings\PeterV5\桌面\本机嘉和电子病历平台软件\本机嘉和电子病历平台软件\EmrSysCom.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysDAL, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents and Settings\PeterV5\桌面\本机嘉和电子病历平台软件\本机嘉和电子病历平台软件\EmrSysDAL.DLL</HintPath>
+    </Reference>
+    <Reference Include="EMRSYSUSERCTL, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents and Settings\PeterV5\桌面\本机嘉和电子病历平台软件\本机嘉和电子病历平台软件\EMRSYSUSERCTL.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysWebservices, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents and Settings\PeterV5\桌面\本机嘉和电子病历平台软件\本机嘉和电子病历平台软件\EmrSysWebservices.DLL</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\Interop.Excel.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBloodApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBloodApply.Designer.cs">
+      <DependentUpon>frmBloodApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBloodComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBloodComponent.Designer.cs">
+      <DependentUpon>frmBloodComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClinicMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClinicMemo.Designer.cs">
+      <DependentUpon>frmClinicMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrbReadMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrbReadMe.Designer.cs">
+      <DependentUpon>frmCrbReadMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomCrb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomCrb.Designer.cs">
+      <DependentUpon>frmHisCustomCrb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomCrbQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomCrbQuery.Designer.cs">
+      <DependentUpon>frmHisCustomCrbQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomDrugNameQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomDrugNameQuery.Designer.cs">
+      <DependentUpon>frmHisCustomDrugNameQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomExam.Designer.cs">
+      <DependentUpon>frmHisCustomExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomExamQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomExamQuery.Designer.cs">
+      <DependentUpon>frmHisCustomExamQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomHistory.Designer.cs">
+      <DependentUpon>frmHisCustomHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomInfect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomInfect.Designer.cs">
+      <DependentUpon>frmHisCustomInfect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomInfectQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomInfectQuery.Designer.cs">
+      <DependentUpon>frmHisCustomInfectQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomInOut.Designer.cs">
+      <DependentUpon>frmHisCustomInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomItemPriceQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomItemPriceQuery.Designer.cs">
+      <DependentUpon>frmHisCustomItemPriceQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomKsfy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomKsfy.Designer.cs">
+      <DependentUpon>frmHisCustomKsfy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomLab.Designer.cs">
+      <DependentUpon>frmHisCustomLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHisCustomMzcf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHisCustomMzcf.Designer.cs">
+      <DependentUpon>frmHisCustomMzcf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfectSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfectSel.Designer.cs">
+      <DependentUpon>frmInfectSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuSheet.Designer.cs">
+      <DependentUpon>frmMenuSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMrDescribe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMrDescribe.Designer.cs">
+      <DependentUpon>frmMrDescribe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperationApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperationApply.Designer.cs">
+      <DependentUpon>frmOperationApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperationConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperationConfirm.Designer.cs">
+      <DependentUpon>frmOperationConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperationQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperationQuery.Designer.cs">
+      <DependentUpon>frmOperationQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatientPreOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientPreOut.Designer.cs">
+      <DependentUpon>frmPatientPreOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatientsInWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientsInWait.Designer.cs">
+      <DependentUpon>frmPatientsInWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCBloodApply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCBloodApply.Designer.cs">
+      <DependentUpon>UCBloodApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCBloodLabReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCBloodLabReport.Designer.cs">
+      <DependentUpon>UCBloodLabReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCDrugNameQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCDrugNameQuery.Designer.cs">
+      <DependentUpon>UCDrugNameQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCExam.Designer.cs">
+      <DependentUpon>UCExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCLab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCLab.Designer.cs">
+      <DependentUpon>UCLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCPatientInpBillDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCPatientInpBillDetail.Designer.cs">
+      <DependentUpon>UCPatientInpBillDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCInput.Designer.cs">
+      <DependentUpon>UCInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlToExcel.cs" />
+    <Compile Include="structLabItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\UCLab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrbReadMe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCrbReadMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomCrb.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomCrb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomCrbQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomCrbQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomDrugNameQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomDrugNameQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomExamQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomExamQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomInfect.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomInfect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomInfectQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomInfectQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomInOut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomItemPriceQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomItemPriceQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomKsfy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomKsfy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomLab.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHisCustomMzcf.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmHisCustomMzcf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfectSel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInfectSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuSheet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMenuSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMrDescribe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMrDescribe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperationApply.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOperationApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperationQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOperationQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientsInWait.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientsInWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCBloodLabReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCBloodLabReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCDrugNameQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCDrugNameQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCPatientInpBillDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCPatientInpBillDetail.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDisAdd.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbAdd.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbBack.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbClose.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbDelete.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbHistory.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbNext.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbPrint.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbQuery.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tbSave.Image.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

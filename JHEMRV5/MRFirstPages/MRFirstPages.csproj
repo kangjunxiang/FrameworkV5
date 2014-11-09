@@ -1,0 +1,166 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A528888C-2FDD-4F7B-AC36-09AEFD921294}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JHEMR.MRFirstPages</RootNamespace>
+    <AssemblyName>MRFirstPages</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EmrSysAdaper, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\EmrSysAdaper.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysCom, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\EmrSysCom.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysDAL, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\EmrSysDAL.DLL</HintPath>
+    </Reference>
+    <Reference Include="EMRSYSUSERCTL, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\EMRSYSUSERCTL.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysWebservices, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\本机嘉和电子病历平台软件\EmrSysWebservices.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCodeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCodeInput.Designer.cs">
+      <DependentUpon>frmCodeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmICDCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmICDCode.Designer.cs">
+      <DependentUpon>frmICDCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMrfirstFY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMrfirstFY.Designer.cs">
+      <DependentUpon>frmMrfirstFY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMRFirstPagePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMRFirstPagePrint.Designer.cs">
+      <DependentUpon>frmMRFirstPagePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPatientMrDiagnose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPatientMrDiagnose.Designer.cs">
+      <DependentUpon>frmPatientMrDiagnose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectDeptUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectDeptUser.Designer.cs">
+      <DependentUpon>frmSelectDeptUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MRFirstPageDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCFirstPagePrintPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFirstPagePrintPad.Designer.cs">
+      <DependentUpon>UCFirstPagePrintPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInput.Designer.cs">
+      <DependentUpon>UCInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMRFirstPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMRFirstPage.Designer.cs">
+      <DependentUpon>UCMRFirstPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMRFirstPageContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMRFirstPageContainer.Designer.cs">
+      <DependentUpon>UCMRFirstPageContainer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmCodeInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCodeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmICDCode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmICDCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMrfirstFY.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMrfirstFY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMRFirstPagePrint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMRFirstPagePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPatientMrDiagnose.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPatientMrDiagnose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectDeptUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectDeptUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCInput.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MRFirstPagesBJ\MRFirstPagesBJ.csproj">
+      <Project>{55AC804E-CDEC-4F92-80B6-D5BE6CB74AF0}</Project>
+      <Name>MRFirstPagesBJ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

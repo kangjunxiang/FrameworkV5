@@ -1,0 +1,301 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{922EB2DA-0ED0-420F-BFC5-7CEED8888B51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EMRCISAdapter</RootNamespace>
+    <AssemblyName>EMRCISAdapter</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\本机嘉和电子病历平台软件\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>D:\GoodWill电子病历平台\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DSOFramer, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.ECGView, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\AxInterop.ECGView.DLL</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.MSChart20Lib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="AxInterop.YSDCMVIEWLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\AxInterop.YSDCMVIEWLib.DLL</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\DevExpress.Data.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\DevExpress.Utils.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\DevExpress.XtraEditors.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v7.2, Version=7.2.5.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\DevExpress.XtraGrid.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="EMRCA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EMREdit, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\EMREdit.dll</HintPath>
+    </Reference>
+    <Reference Include="EmrEntities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\EmrEntities.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysAdaper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\EmrSysAdaper.dll</HintPath>
+    </Reference>
+    <Reference Include="EmrSysCom, Version=3.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\EmrSysCom.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysDAL, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\EmrSysDAL.DLL</HintPath>
+    </Reference>
+    <Reference Include="EmrSysUserCtl, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EmrSysWebservices, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMR\EmrSysWebservices.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSChart20Lib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.VBIDE, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Word, Version=8.3.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="msdatasrc, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\沈阳肛肠\GoodWill电子病历平台\msdatasrc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EMREditMrPadByHospital.cs" />
+    <Compile Include="Exam\frmExamApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\frmExamApply.Designer.cs">
+      <DependentUpon>frmExamApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\UCExamApplyList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Exam\UCExamApplyList.Designer.cs">
+      <DependentUpon>UCExamApplyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\UCExamResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Exam\UCExamResult.Designer.cs">
+      <DependentUpon>UCExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEMRBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEMRBasket.designer.cs">
+      <DependentUpon>frmEMRBasket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HisAdaper\EMREditHisAdaper.cs" />
+    <Compile Include="HisAdaper\EMREditHisAdaperJiahe.cs" />
+    <Compile Include="HisAdaper\EMREditHisAdaperUse.cs" />
+    <Compile Include="IniFiles.cs" />
+    <Compile Include="LabHIS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabHIS.Designer.cs">
+      <DependentUpon>LabHIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab\frmLabApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab\frmLabApply.Designer.cs">
+      <DependentUpon>frmLabApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab\PASCIE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lab\PASCIE.Designer.cs">
+      <DependentUpon>PASCIE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab\UCLabResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lab\UCLabResult.Designer.cs">
+      <DependentUpon>UCLabResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\UCOrderMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Order\UCOrderMain.Designer.cs">
+      <DependentUpon>UCOrderMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UCChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChart.Designer.cs">
+      <DependentUpon>UCChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEMROrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEMROrders.Designer.cs">
+      <DependentUpon>UCEMROrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uchisoraclejc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uchisoraclejc.Designer.cs">
+      <DependentUpon>uchisoraclejc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCOldMrView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCOldMrView.Designer.cs">
+      <DependentUpon>UCOldMrView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Exam\frmExamApply.resx">
+      <DependentUpon>frmExamApply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\UCExamApplyList.resx">
+      <DependentUpon>UCExamApplyList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\UCExamResult.resx">
+      <DependentUpon>UCExamResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEMRBasket.resx">
+      <DependentUpon>frmEMRBasket.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\frmLabApply.resx">
+      <DependentUpon>frmLabApply.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab\UCLabResult.resx">
+      <DependentUpon>UCLabResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\UCOrderMain.resx">
+      <DependentUpon>UCOrderMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UCChart.resx">
+      <DependentUpon>UCChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEMROrders.resx">
+      <DependentUpon>UCEMROrders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uchisoraclejc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>uchisoraclejc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCOldMrView.resx">
+      <DependentUpon>UCOldMrView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\localhost\Service.disco" />
+    <None Include="Web References\localhost\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\localhost\</RelPath>
+      <UpdateFromURL>http://localhost/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EMRCISAdapter_localhost_EmrService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
